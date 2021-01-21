@@ -7,7 +7,22 @@ guest_list = [
     ["guest2", "Ganondorf", 76, "Male", 3, 2, 4, 2, "King of Hyrule."],
     ["guest3", "Aerith Gainsborough", 19, "Female", 5, 3, 1, 3, "We can, we will."],
     ["guest4", "Thomas A. Anderson", 36, "Male", 2, 3, 1, 4, "There's only one."],
-    ["guest5", "Elliot Alderson", 26, "Male", 1, 5, 5, 5, "You did good kiddo."]
+    ["guest5", "Elliot Alderson", 26, "Male", 1, 5, 5, 5, "You did good kiddo."],
+    ["guest6", "Maria Juliette", 43, "Female", 3, 5, 2, 5, "Nursing Student."],
+    ["guest7", "Andrew Pascale", 32, "Non-binary", 3, 2, 4, 2, "Ouija Aficionado."],
+    ["guest8", "Marco Troy", 33, "Male", 5, 3, 1, 3, "I beleive in everything."],
+    ["guest9", "Andrea Justa", 25, "Female", 2, 3, 1, 4, "The truth is out there."],
+    ["guest10", "Jake Gabriel", 54, "Male", 1, 5, 5, 5, "Student of the thing called life."],
+    ["guest11", "Fernando Calandra", 31, "Male", 3, 5, 2, 5, "Biochemist by trade."],
+    ["guest12", "Paris Hills", 22, "Female", 3, 2, 4, 2, "Fashion is my life."],
+    ["guest13", "McKayla Wallace", 45, "Non-binary", 5, 3, 1, 3, "Old-school witch."],
+    ["guest14", "Priscilla Nada", 25, "Female", 2, 3, 1, 4, "Sorceress in training."],
+    ["guest15", "Gabriel Lacoste", 25, "Other", 1, 5, 5, 5, "Skater by day, Batman by night."],
+    ["guest16", "Princess Mononoke", 18, "Female", 3, 5, 2, 5, "Princess of another world."],
+    ["guest17", "Christopher Lloyd", 68, "Male", 3, 2, 4, 2, "Actor, time traveler."],
+    ["guest18", "Marcela Gutierrez", 47, "Female", 5, 3, 1, 3, "There's a plan for all of us."],
+    ["guest19", "Ramachandra Patel", 38, "Male", 2, 3, 1, 4, "People say I'm an amazing cook."],
+    ["guest20", "Troy Lincoln", 26, "Male", 1, 5, 5, 5, "Martial artist, watch out ghosts."],
 ]
 
 guest_list.each do |nickname, full_name, age, gender, investigator, believer, tech, psychic, bio |
@@ -53,7 +68,11 @@ room_list.each do |floor, number, board, do_not_disturb, note, hotel_id|
 end
 
 # booking
-# max_guests, private, guest_id, room_id
+# 20 guests, 12 rooms
+# max_guests, guest_id, room_id
 booking_list = [
-    [3, ]
+    [3,1,1],[1,2,2],[4,3,3],[8,4,4],[1,5,5],
+    [1,6,6],[2,7,7],[6,8,8],[7,9,9],[1,10,10],
+    [1,11,11],[3,12,0],[9,13,1],[9,14,2],[1,15,3],
+    [4,16,4],[6,17,5],[3,18,6],[2,19,7],[9,0,8]
 ]
