@@ -1,1 +1,31 @@
-<h1>Register a new Guest<h1>
+<h1>Register as new Guest</h1>
+
+<%= form_for @guest do |f| %>
+
+    <%= f.label :nickname, "Nickname" %>
+    <%= f.text_field :nickname %></br>
+
+    <%= f.label :full_name, "Full Name" %>
+    <%= f.text_field :full_name %></br>
+
+    <%= f.label :age, "Age" %>
+    <%= f.text_field :age %></br>
+
+    <%= f.label :gender, "Gender" %></br>
+    <%= f.radio_button :gender, "Male" %> Male <br />
+    <%= f.radio_button :gender, "Female" %> Female <br />
+    <%= f.radio_button :gender, "Non-binary" %> Non-binary <br />
+    <%= f.radio_button :gender, "Other" %> Other <br />
+
+<% end %>
+
+
+    t.string "nickname"
+    t.string "full_name"
+    t.integer "age"
+    t.string "gender"
+    t.integer "investigator"
+    t.integer "believer"
+    t.integer "tech"
+    t.integer "psychic"
+    t.string "bio"

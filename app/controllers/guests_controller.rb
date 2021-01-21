@@ -7,6 +7,7 @@ class GuestsController < ApplicationController
     end
 
     def new
+        @guest = Guest.new
     end
 
     def edit
@@ -20,5 +21,5 @@ class GuestsController < ApplicationController
 
     def destroy
     end
-    
+
 end
