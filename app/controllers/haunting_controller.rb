@@ -1,2 +1,0 @@
-class HauntingController < ApplicationController
-end

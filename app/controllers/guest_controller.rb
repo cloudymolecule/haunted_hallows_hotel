@@ -1,2 +1,0 @@
-class GuestController < ApplicationController
-end

@@ -1,2 +1,0 @@
-class VisitorLogController < ApplicationController
-end
