@@ -1,7 +1,7 @@
 class CreateHauntings < ActiveRecord::Migration[6.1]
   def change
     create_table :hauntings do |t|
-      t.boolean :public
+      t.boolean :common
       t.string :description
       t.integer :type
       t.string :location

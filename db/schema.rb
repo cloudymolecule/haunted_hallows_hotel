@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 2021_01_20_211016) do
   end
 
   create_table "hauntings", force: :cascade do |t|
-    t.boolean "public"
+    t.boolean "common"
     t.string "description"
     t.integer "type"
     t.string "location"
