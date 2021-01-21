@@ -11,6 +11,12 @@
     <%= f.label :age, "Age" %>
     <%= f.text_field :age %></br>
 
+    <%= f.label :password, "Password (at least 8 characters long)" %>
+    <%= f.password_field :password %></br>
+
+    <%= f.label :password_confirmation, "Password Confirmation" %>
+    <%= f.password_field :password_confirmation %></br>
+
     <%= f.label :gender, "Gender" %></br>
     <%= f.radio_button :gender, "Male" %> Male <br />
     <%= f.radio_button :gender, "Female" %> Female <br />

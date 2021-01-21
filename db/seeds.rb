@@ -9,7 +9,7 @@ guest_list = [
     ["guest5", "Elliot Alderson", 26, "Male", 1, 5, 5, 5, "You did good kiddo.", "12345678", "12345678"],
     ["guest6", "Maria Juliette", 43, "Female", 3, 5, 2, 5, "Nursing Student.", "12345678", "12345678"],
     ["guest7", "Andrew Pascale", 32, "Non-binary", 3, 2, 4, 2, "Ouija Aficionado.", "12345678", "12345678"],
-    ["guest8", "Marco Troy", 33, "Male", 5, 3, 1, 3, "I beleive in everything.", "12345678", "12345678"],
+    ["guest8", "Marco Troy", 33, "Male", 5, 3, 1, 3, "I believe in everything.", "12345678", "12345678"],
     ["guest9", "Andrea Justa", 25, "Female", 2, 3, 1, 4, "The truth is out there.", "12345678", "12345678"],
     ["guest10", "Jake Gabriel", 54, "Male", 1, 5, 5, 5, "Student of the thing called life.", "12345678", "12345678"],
     ["guest11", "Fernando Calandra", 31, "Male", 3, 5, 2, 5, "Biochemist by trade.", "12345678", "12345678"],
