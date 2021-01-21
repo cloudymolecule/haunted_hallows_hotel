@@ -6,7 +6,6 @@ class CreateRooms < ActiveRecord::Migration[6.1]
       t.string :board
       t.boolean :do_not_disturb
       t.string :note
-      t.integer :hotel_id
 
       t.timestamps
     end
