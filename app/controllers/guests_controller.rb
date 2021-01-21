@@ -19,7 +19,7 @@ class GuestsController < ApplicationController
         
         if @guest.save
             session[:guest_id] = @guest.id
-            redirect_to guest_path(@guest)
+            redirect_to @guest
         else
             render :new
         end
