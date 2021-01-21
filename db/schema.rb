@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_21_032505) do
+ActiveRecord::Schema.define(version: 2021_01_21_230907) do
 
   create_table "bookings", force: :cascade do |t|
     t.integer "max_guests"
@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 2021_01_21_032505) do
     t.string "bio"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "password_digest"
   end
 
   create_table "hauntings", force: :cascade do |t|

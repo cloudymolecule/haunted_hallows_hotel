@@ -15,7 +15,7 @@ class GuestsController < ApplicationController
 
     def create
         @guest = Guest.new(guest_params)
-        byebug
+        
         # if @guest.save
         #     session[:user_id] = @guest.id
         #     redirect_to @guest

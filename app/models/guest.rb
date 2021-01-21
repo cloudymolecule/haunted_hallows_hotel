@@ -3,5 +3,5 @@ class Guest < ApplicationRecord
     has_many :hauntings
     has_many :visitor_logs
     has_many :rooms, through: :bookings
-
+    has_secure_password
 end
