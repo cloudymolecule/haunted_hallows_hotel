@@ -16,12 +16,12 @@ class GuestsController < ApplicationController
     def create
         @guest = Guest.new(guest_params)
         
-        # if @guest.save
-        #     session[:user_id] = @guest.id
-        #     redirect_to @guest
-        # else
-        #     render :new
-        # end
+        if @guest.save
+            session[:guest_id] = @guest.id
+            redirect_to @guest
+        else
+            render :new
+        end
     end
 
     def update
