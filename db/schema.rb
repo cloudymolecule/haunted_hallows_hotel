@@ -14,7 +14,6 @@ ActiveRecord::Schema.define(version: 2021_01_20_211016) do
 
   create_table "bookings", force: :cascade do |t|
     t.integer "max_guests"
-    t.boolean "private"
     t.integer "guest_id"
     t.integer "room_id"
     t.datetime "created_at", precision: 6, null: false

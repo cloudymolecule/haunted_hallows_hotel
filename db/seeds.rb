@@ -35,9 +35,25 @@ room_list = [
     [6, 601, "Ouija board anyone?", true, "Not for the faint of heart", 1],
     [1, 102, "Got new sneakers!", false, "Just making conversation", 1],
     [2, 202, "EVP phenomena question", false, "help me out, weird recording.", 1],
-    [3, 203, "I can see Auras", false, "Auras are my thing", 1],
-    [4, 204, "My house is haunted, please keep me company", false, "Help!!", 1],
-    [5, 205, "I hear chains rattling at night", true, "sounds at night", 1],
-    [5, 205, "Let's play with the Necronomicon!", true, "Necronomicon, beware!", 1]
+    [3, 302, "I can see Auras", false, "Auras are my thing", 1],
+    [4, 402, "My house is haunted, please keep me company", false, "Help!!", 1],
+    [5, 502, "I hear chains rattling at night", true, "sounds at night", 1],
+    [6, 602, "Let's play with the Necronomicon!", true, "Necronomicon, beware!", 1]
 ]
 
+room_list.each do |floor, number, board, do_not_disturb, note, hotel_id|
+    Room.create(
+        floor: floor,
+        number: number,
+        board: board,
+        do_not_disturb: do_not_disturb,
+        note: note,
+        hotel_id: hotel_id
+        )
+end
+
+# booking
+# max_guests, private, guest_id, room_id
+booking_list = [
+    [3, ]
+]
