@@ -3,6 +3,7 @@ Guest.destroy_all
 Room.destroy_all
 Booking.destroy_all
 Haunting.destroy_all
+VisitorLog.destroy_all
 
 haunted_hallows_hotel = Hotel.create(name: "Haunted Hallows Hotel")
 
