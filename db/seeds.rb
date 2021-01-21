@@ -1,9 +1,6 @@
-Hotel.destroy_all
-Guest.destroy_all
-Room.destroy_all
-Booking.destroy_all
-Haunting.destroy_all
-VisitorLog.destroy_all
+# run 
+# rake db:drop db:create db:migrate
+# before seeding database
 
 haunted_hallows_hotel = Hotel.create(name: "Haunted Hallows Hotel")
 
