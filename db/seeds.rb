@@ -4,7 +4,7 @@ Room.destroy_all
 Booking.destroy_all
 Haunting.destroy_all
 
-haunted_hallows_hotel = Hotel.create
+haunted_hallows_hotel = Hotel.create(name: "Haunted Hallows Hotel")
 
 # guests
 # nickname, full_name, age, gender, investigator, believer, tech, psychic, bio
@@ -110,4 +110,17 @@ hauntings_list.each do | common, description, classification, location, room_id,
         room_id: room_id,
         guest_id: guest_id
     )
+end
+
+visitor_logs = [
+    ["Awesome", 1, 3],
+    ["Love the Hotel", 1, 5],
+    ["Too weird for me", 1, 6],
+    ["Priscilla was here", 1, 13],
+    ["Nice", 1, 8],
+    ["Nothing to say", 1,15]
+]
+
+visitor_logs.each do |entry, hotel_id, guest_id|
+    VisitorLog.create(entry: entry, hotel_id: hotel_id, guest_id: guest_id)
 end
