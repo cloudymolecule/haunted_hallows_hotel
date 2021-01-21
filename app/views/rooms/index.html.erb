@@ -1,9 +1,9 @@
 <h1>List of Rooms</h1>
 
 <% @rooms.each do |room| %>
-    <h3>Floor <%= room.floor %></h3></br>
-    <p>Room Number <%= room.number %></p></br>
+    <h2>Floor <%= room.floor %></h2></br>
+    <p>Room Number <%= link_to room.number, room %></p></br>
     <p>Do Not Disturb? <%= room.do_not_disturb %></p></br>
-    <p> Note on Room Door: </p></br>
-    <%= room.note %></br>
+    <p> Note on Room Door: </p>
+    <%= room.note %></br></br>
 <% end %>

@@ -6,7 +6,6 @@ class RoomsController < ApplicationController
     end
 
     def show
-        @room = Room.find
     end
 
     def new
