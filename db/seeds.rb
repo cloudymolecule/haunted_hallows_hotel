@@ -1,6 +1,4 @@
-# run 
-# rake db:drop db:create db:migrate
-# before seeding database
+# run >> rake db:drop db:create db:migrate >> from terminal before seeding database
 
 haunted_hallows_hotel = Hotel.create(name: "Haunted Hallows Hotel")
 
