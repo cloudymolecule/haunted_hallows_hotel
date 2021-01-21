@@ -1,6 +1,5 @@
 # run >> rake db:drop db:create db:migrate >> from terminal before seeding database
 
-haunted_hallows_hotel = Hotel.create(name: "Haunted Hallows Hotel")
 
 guest_list = [
     ["guest1", "Luke Skywalker", 28, "Male", 3, 5, 2, 5, "Trying to balance the force."],
@@ -40,28 +39,27 @@ guest_list.each do |nickname, full_name, age, gender, investigator, believer, te
 end
 
 room_list = [
-    [1, 101, "I'm bored", false, "Convince me of paranormal stuff", 1],
-    [2, 201, "Efficacy of EMF detectors", false, "researching equipment, serious pleople only.", 1],
-    [3, 301, "Sensing energies in the basement", true, "Investigating Noises", 1],
-    [4, 401, "Looking for friend to investigate cemetery", false, "Let's meet up", 1],
-    [5, 501, "weird dream?", false, "Dreams discussion", 1],
-    [6, 601, "Ouija board anyone?", true, "Not for the faint of heart", 1],
-    [1, 102, "Got new sneakers!", false, "Just making conversation", 1],
-    [2, 202, "EVP phenomena question", false, "help me out, weird recording.", 1],
-    [3, 302, "I can see Auras", false, "Auras are my thing", 1],
-    [4, 402, "My house is haunted, please keep me company", false, "Help!!", 1],
-    [5, 502, "I hear chains rattling at night", true, "sounds at night", 1],
-    [6, 602, "Let's play with the Necronomicon!", true, "Necronomicon, beware!", 1]
+    [1, 101, "I'm bored", false, "Convince me of paranormal stuff"],
+    [2, 201, "Efficacy of EMF detectors", false, "researching equipment, serious pleople only."],
+    [3, 301, "Sensing energies in the basement", true, "Investigating Noises"],
+    [4, 401, "Looking for friend to investigate cemetery", false, "Let's meet up"],
+    [5, 501, "weird dream?", false, "Dreams discussion"],
+    [6, 601, "Ouija board anyone?", true, "Not for the faint of heart"],
+    [1, 102, "Got new sneakers!", false, "Just making conversation"],
+    [2, 202, "EVP phenomena question", false, "help me out, weird recording."],
+    [3, 302, "I can see Auras", false, "Auras are my thing"],
+    [4, 402, "My house is haunted, please keep me company", false, "Help!!"],
+    [5, 502, "I hear chains rattling at night", true, "sounds at night"],
+    [6, 602, "Let's play with the Necronomicon!", true, "Necronomicon, beware!"]
 ]
 
-room_list.each do |floor, number, board, do_not_disturb, note, hotel_id|
+room_list.each do |floor, number, board, do_not_disturb, note|
     Room.create(
         floor: floor,
         number: number,
         board: board,
         do_not_disturb: do_not_disturb,
-        note: note,
-        hotel_id: hotel_id
+        note: note
         )
 end
 
@@ -101,14 +99,14 @@ hauntings_list.each do | common, description, classification, location, room_id,
 end
 
 visitor_logs = [
-    ["Awesome", 1, 3],
-    ["Love the Hotel", 1, 5],
-    ["Too weird for me", 1, 6],
-    ["Priscilla was here", 1, 13],
-    ["Nice", 1, 8],
-    ["Nothing to say", 1,15]
+    ["Awesome", 3],
+    ["Love the Hotel", 5],
+    ["Too weird for me", 6],
+    ["Priscilla was here", 13],
+    ["Nice", 8],
+    ["Nothing to say",15]
 ]
 
-visitor_logs.each do |entry, hotel_id, guest_id|
-    VisitorLog.create(entry: entry, hotel_id: hotel_id, guest_id: guest_id)
+visitor_logs.each do |entry, guest_id|
+    VisitorLog.create(entry: entry, guest_id: guest_id)
 end
