@@ -1,3 +1,9 @@
+Hotel.destroy_all
+Guest.destroy_all
+Room.destroy_all
+Booking.destroy_all
+Haunting.destroy_all
+
 haunted_hallows_hotel = Hotel.new
 
 # guests
@@ -68,7 +74,6 @@ room_list.each do |floor, number, board, do_not_disturb, note, hotel_id|
 end
 
 # booking
-# 20 guests, 12 rooms
 # max_guests, guest_id, room_id
 booking_list = [
     [3,1,1],[1,2,2],[4,3,3],[8,4,4],[1,5,5],
@@ -76,3 +81,33 @@ booking_list = [
     [1,11,11],[3,12,0],[9,13,1],[9,14,2],[1,15,3],
     [4,16,4],[6,17,5],[3,18,6],[2,19,7],[9,0,8]
 ]
+
+booking_list.each do | max_guests, guest_id, room_id |
+    Booking.create(max_guests: max_guests, guest_id: guest_id, room_id: room_id)
+end
+
+# haunting
+# public, description, type, location, room_id, guest_id
+hauntings_list = [
+    [false, "rattling chains", "Paranormal", "My house", 0, 1],
+    [true, "Apparation", "Paranormal", "Abandoned warehouse", 2, 2],
+    [true, "Flying orb", "Unknown", "Garden Outside, NJ", 3, 3],
+    [false, "Recurring dream", "Psychic", "In my dreams", 3, 8],
+    [true, "Demonic posession", "Demonic", "Watchung Reservation, NJ", 4, 10],
+    [true, "Something touched my back", "paranormal", "NY", 5, 12],
+    [true, "UFO in the sky??", "UFO", "Backyard", 6, 9],
+    [false, "Child ghost", "Paranormal", "In my room", 7, 0],
+    [true, "Deja Vu", "Psychic", "In school", 8, 16,
+    [true, "Orbs in photos", "Paranormal", "Somewhere in Ontario", 9, 15]
+]
+
+hauntings_list.each do | common, description, type, location, room_id, guest_id |
+    Haunting.create(
+        common: common,
+        description: description,
+        type: type,
+        location: location,
+        room_id: room_id,
+        guest_id: guest_id
+    )
+end
