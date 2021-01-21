@@ -4,7 +4,7 @@ Room.destroy_all
 Booking.destroy_all
 Haunting.destroy_all
 
-haunted_hallows_hotel = Hotel.new
+haunted_hallows_hotel = Hotel.create
 
 # guests
 # nickname, full_name, age, gender, investigator, believer, tech, psychic, bio
