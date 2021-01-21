@@ -1,4 +1,5 @@
 class GuestsController < ApplicationController
+    before_action :set_guest, only: [:show, :edit, :update, :destroy]
 
     def index
     end
@@ -18,7 +19,7 @@ class GuestsController < ApplicationController
         
         if @guest.save
             session[:guest_id] = @guest.id
-            redirect_to @guest
+            redirect_to guest_path(@guest)
         else
             render :new
         end
@@ -31,6 +32,10 @@ class GuestsController < ApplicationController
     end
 
     private
+
+    def set_guest
+        @guest = Guest.find(params[:id])
+    end
 
     def guest_params
         params.require(:guest).permit(:nickname, :full_name, :age, :gender, :investigator, :believer, :tech, :psychic, :bio, :password, :password_confirmation)
