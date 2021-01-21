@@ -7,8 +7,6 @@ VisitorLog.destroy_all
 
 haunted_hallows_hotel = Hotel.create(name: "Haunted Hallows Hotel")
 
-# guests
-# nickname, full_name, age, gender, investigator, believer, tech, psychic, bio
 guest_list = [
     ["guest1", "Luke Skywalker", 28, "Male", 3, 5, 2, 5, "Trying to balance the force."],
     ["guest2", "Ganondorf", 76, "Male", 3, 2, 4, 2, "King of Hyrule."],
@@ -46,8 +44,6 @@ guest_list.each do |nickname, full_name, age, gender, investigator, believer, te
     )
 end
 
-# rooms
-# floor, number, board, do_not_disturb, note, hotel_id
 room_list = [
     [1, 101, "I'm bored", false, "Convince me of paranormal stuff", 1],
     [2, 201, "Efficacy of EMF detectors", false, "researching equipment, serious pleople only.", 1],
@@ -74,8 +70,6 @@ room_list.each do |floor, number, board, do_not_disturb, note, hotel_id|
         )
 end
 
-# booking
-# max_guests, guest_id, room_id
 booking_list = [
     [3,1,1],[1,2,2],[4,3,3],[8,4,4],[1,5,5],
     [1,6,6],[2,7,7],[6,8,8],[7,9,9],[1,10,10],
@@ -87,8 +81,6 @@ booking_list.each do | max_guests, guest_id, room_id |
     Booking.create(max_guests: max_guests, guest_id: guest_id, room_id: room_id)
 end
 
-# haunting
-# public, description, classification, location, room_id, guest_id
 hauntings_list = [
     [false, "rattling chains", 0, "My house", 0, 1],
     [true, "Apparation", 0, "Abandoned warehouse", 2, 2],
