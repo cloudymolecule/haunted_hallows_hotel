@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+    skip_before_action :authorized, only [:new, :create, :homepage]
 
     def new
         @guest = Guest.new
