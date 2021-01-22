@@ -4,6 +4,7 @@ class CreateGuestsComments < ActiveRecord::Migration[6.1]
       t.string :entry
       t.integer :guest_id
       t.integer :comment_id
+      
       t.timestamps
     end
   end
