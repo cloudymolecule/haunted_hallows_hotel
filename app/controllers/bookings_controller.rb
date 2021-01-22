@@ -8,11 +8,7 @@ class BookingsController < ApplicationController
     end
 
     def new
-        if @guest = Guest.find(session[:guest_id])
-            @booking = Booking.new
-        else
-            redirect_to controller: :SessionsController, action: :homepage
-        end
+        @booking = Booking.new
     end
 
     def edit
