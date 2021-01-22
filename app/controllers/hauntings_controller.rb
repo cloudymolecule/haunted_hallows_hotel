@@ -1,4 +1,5 @@
 class HauntingsController < ApplicationController
+    before_action :set_haunting, only: [:show, :edit, :update, :destroy]
 
     def index
         if params[:guest_id]
@@ -24,6 +25,12 @@ class HauntingsController < ApplicationController
     end
 
     def destroy
+    end
+
+    private
+
+    def set_haunting
+        @haunting = Haunting.find(params[:id])
     end
     
 end
