@@ -10,6 +10,7 @@ class CreateGuests < ActiveRecord::Migration[6.1]
       t.integer :tech
       t.integer :psychic
       t.string :bio
+      t.string :password_digest
 
       t.timestamps
     end

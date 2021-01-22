@@ -1,18 +1,1 @@
-<h1>Book a Room</h1>
 
-<%= form_for @booking do |f| %>
-
-    <%= f.label :floor, "Floor Number:" %>
-    <%= f.radio_button :floor, 1 %> 1st </br> 
-    <%= f.radio_button :floor, 2 %> 2nd </br> 
-    <%= f.radio_button :floor, 3 %> 3rd </br> 
-    <%= f.radio_button :floor, 4 %> 4th </br> 
-    <%= f.radio_button :floor, 5 %> 5th </br> 
-    <%= f.radio_button :floor, 6 %> 6th </br> 
-
-    <%= f.label :max_guests, "Maximum number of guests allowed:" %>
-    <%= f.text_field :max_guests %></br>
-
-    <%= f.submit "Confirm Booking" %>
-
-<% end %>

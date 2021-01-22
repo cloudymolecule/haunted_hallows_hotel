@@ -1,0 +1,27 @@
+<h1>Book a Room</h1>
+
+<%= form_for @room do |f| %>
+
+    <%= f.label :floor, "Floor Number:" %>
+    <%= f.radio_button :floor, 1 %> 1st </br> 
+    <%= f.radio_button :floor, 2 %> 2nd </br> 
+    <%= f.radio_button :floor, 3 %> 3rd </br> 
+    <%= f.radio_button :floor, 4 %> 4th </br> 
+    <%= f.radio_button :floor, 5 %> 5th </br> 
+    <%= f.radio_button :floor, 6 %> 6th </br> 
+
+    <%= f.label :max_guests, "Maximum number of guests allowed:" %>
+    <%= f.text_field :max_guests %></br>
+
+    <%= f.label :do_not_disturb, "Would you like the room to be public or private?:" %>
+    <%= f.radio_button :do_not_disturb, false %> Public </br> 
+    <%= f.radio_button :do_not_disturb, true %> Private </br> 
+
+    <%= f.label :note, "What message would you like displayed on the door?:" %>
+    <%= f.text_field :note %></br>
+
+
+
+    <%= f.submit "Confirm Booking" %>
+
+<% end %>

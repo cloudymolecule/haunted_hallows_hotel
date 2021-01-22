@@ -15,6 +15,7 @@ class BookingsController < ApplicationController
     end
 
     def create
+        
     end
 
     def update
@@ -27,6 +28,10 @@ class BookingsController < ApplicationController
 
     def set_booking
         @booking = Booking.find(params[:id])
+    end
+
+    def booking_params
+        params.require(:booking).permit()
     end
 
 end
