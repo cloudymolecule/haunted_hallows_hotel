@@ -11,7 +11,7 @@ class BookingsController < ApplicationController
         if @guest = Guest.find(session[:guest_id])
             @booking = Booking.new
         else
-            redirect_to controller: :StaticController, action: :homepage
+            redirect_to controller: :SessionsController, action: :homepage
         end
     end
 

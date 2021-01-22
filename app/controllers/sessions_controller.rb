@@ -15,6 +15,7 @@ class SessionsController < ApplicationController
     end
 
     def homepage
+    end
 
     private
 
