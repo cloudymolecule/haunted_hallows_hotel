@@ -77,20 +77,21 @@ booking_list.each do | max_guests, guest_id, room_id |
 end
 
 hauntings_list = [
-    [false, "rattling chains", 0, "My house", 5, 1],
-    [true, "Apparation", 0, "Abandoned warehouse", 2, 2],
-    [true, "Flying orb", 5, "Garden Outside, NJ", 3, 3],
-    [false, "Recurring dream", 1, "In my dreams", 3, 8],
-    [true, "Demonic posession", 2, "Watchung Reservation, NJ", 4, 10],
-    [true, "Something touched my back", "paranormal", "NY", 5, 12],
-    [true, "UFO in the sky??", 3, "Backyard", 6, 9],
-    [false, "Child ghost", 0, "In my room", 7, 5],
-    [true, "Deja Vu", 1, "In school", 8, 16,],
-    [true, "Orbs in photos", 0, "Somewhere in Ontario", 9, 15]
+    ["chains", false, "rattling chains", 0, "My house", 5, 1],
+    ["Scary Ghost",true, "Apparation", 0, "Abandoned warehouse", 2, 2],
+    ["Orb",true, "Flying orb by my house", 5, "Garden Outside, NJ", 3, 3],
+    ["Dream",false, "Recurring dream", 1, "In my dreams", 3, 8],
+    ["Demons?? What??",true, "Demonic posession", 2, "Watchung Reservation, NJ", 4, 10],
+    ["Weird experience",true, "Something touched my back", "paranormal", "NY", 5, 12],
+    ["Aliens!",true, "UFO in the sky??", 3, "Backyard", 6, 9],
+    ["Ghost",false, "Child ghost", 0, "In my room", 7, 5],
+    ["Deja vu",true, "I remember something that didn't happen", 1, "In school", 8, 16,],
+    ["I have evidence",true, "Orbs in photos, I have a bunch", 0, "Somewhere in Ontario", 9, 15]
 ]
 
-hauntings_list.each do | common, description, classification, location, room_id, guest_id |
+hauntings_list.each do | name, common, description, classification, location, room_id, guest_id |
     Haunting.create(
+        name: name,
         common: common,
         description: description,
         classification: classification,
