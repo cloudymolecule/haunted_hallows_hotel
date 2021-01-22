@@ -1,4 +1,5 @@
 class BookingsController < ApplicationController
+    before_action :set_booking, only: [:show, :edit, :update, :destroy]
 
     def index
     end
@@ -7,6 +8,7 @@ class BookingsController < ApplicationController
     end
 
     def new
+        @booking = Booking.new
     end
 
     def edit
@@ -19,6 +21,12 @@ class BookingsController < ApplicationController
     end
 
     def destroy
+    end
+
+    private
+
+    def set_booking
+        @booking = Booking.find(params[:id])
     end
 
 end

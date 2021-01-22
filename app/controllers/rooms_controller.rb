@@ -2,7 +2,11 @@ class RoomsController < ApplicationController
     before_action :set_room, only: [:show, :edit, :update, :destroy]
 
     def index
-        @rooms = Room.all
+        if params[:guest_id]
+            @rooms = Guest.find(params[:guest_id]).rooms
+        else
+            @rooms = Room.all
+        end
     end
 
     def show
