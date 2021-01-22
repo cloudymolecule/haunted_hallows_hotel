@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'static#homepage'
+  root 'sessions#homepage'
   resources :bookings
   resources :guests 
   resources :hauntings 

@@ -14,6 +14,8 @@ class SessionsController < ApplicationController
         redirect_to login_path
     end
 
+    def homepage
+
     private
 
     def sessions_params
