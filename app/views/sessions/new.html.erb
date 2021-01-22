@@ -1,0 +1,13 @@
+<h1>Login Here!</h1>
+
+<%= form_for @guest, url: login_path do |f| %>
+
+    <%= f.label :nickname, "Nickname:" %>
+    <%= f.text_field :nickname %>
+
+    <%= f.label :password, "Password" %>
+    <%= f.text_field :password %></br>
+
+    <%= f.submit "Log In" %>
+
+<% end %>
