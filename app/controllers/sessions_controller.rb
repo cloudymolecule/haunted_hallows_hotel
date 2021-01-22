@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
             sessions[:guest_id] = @guest.id
             redirect_to guest_path(@guest)
         else
-            redirect_to '/login'
+            redirect_to login_path
         end
     end
 
