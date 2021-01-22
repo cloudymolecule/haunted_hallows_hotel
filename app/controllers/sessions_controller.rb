@@ -5,8 +5,13 @@ class SessionsController < ApplicationController
     end
 
     def create
-        # session[:guest_id] = @guest.id
-        # redirect_to guest_path(@guest)
+        @guest = Guest.find_by(nickname: sessions_params[:nickname])
+        if @guest && @guest.authenticate(sessions_params[:password])
+            sessions[:guest_id] = @guest.id
+            redirect_to guest_path(@guest)
+        else
+            redirect_to '/login'
+        end
     end
 
     def destroy
