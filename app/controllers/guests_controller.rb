@@ -1,6 +1,7 @@
 class GuestsController < ApplicationController
     before_action :set_guest, only: [:show, :edit, :update, :destroy]
-
+    skip_before_action :authorized, only [:new, :create]
+    
     def index
     end
 

@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
     helper_method :current_user
     helper_method :logged_in?
+    before_action :authorized
 
     def current_user
         Guest.find_by(Id: session[:guest_id])
@@ -8,5 +9,9 @@ class ApplicationController < ActionController::Base
 
     def logged_in?
         !current_user.nil?
+    end
+
+    def authorized
+        redirect_to '/homepage' unless logged_in?
     end
 end
