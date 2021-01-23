@@ -10,6 +10,65 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2021_01_23_013657) do
+
+  create_table "boards", force: :cascade do |t|
+    t.integer "room_id"
+    t.integer "comment_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "bookings", force: :cascade do |t|
+    t.integer "guest_id"
+    t.integer "room_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.string "entry"
+    t.integer "guest_id"
+    t.integer "room_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "guests", force: :cascade do |t|
+    t.string "username"
+    t.string "email"
+    t.integer "age"
+    t.string "gender"
+    t.integer "investigator"
+    t.integer "believer"
+    t.integer "tech"
+    t.integer "psychic"
+    t.string "bio"
+    t.string "password_digest"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "hauntings", force: :cascade do |t|
+    t.string "name"
+    t.boolean "common"
+    t.string "description"
+    t.integer "classification"
+    t.string "location"
+    t.integer "room_id"
+    t.integer "guest_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "rooms", force: :cascade do |t|
+    t.integer "floor"
+    t.integer "number"
+    t.integer "max_guests"
+    t.boolean "do_not_disturb"
+    t.string "note"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
 end
