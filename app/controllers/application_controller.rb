@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
     before_action :authorized
 
     def current_user
-        Guest.find_by(Id: session[:guest_id])
+        Guest.find_by(id: session[:guest_id])
     end
 
     def logged_in?
