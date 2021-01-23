@@ -1,2 +1,2 @@
-module GuestHelper
+module GuestsHelper
 end

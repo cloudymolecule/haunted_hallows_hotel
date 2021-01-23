@@ -2,8 +2,8 @@ Rails.application.routes.draw do
   root 'sessions#homepage', as: 'homepage'
   resources :bookings
   resources :guests 
-  resources :hauntings 
-  resources :visitor_logs
+  resources :boards
+  resources :comments
 
 
   resources :guests, only: [:show, :index] do

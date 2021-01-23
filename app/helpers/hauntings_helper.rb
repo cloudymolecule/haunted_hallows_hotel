@@ -1,2 +1,2 @@
-module HauntingHelper
+module HauntingsHelper
 end
