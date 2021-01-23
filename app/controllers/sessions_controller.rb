@@ -26,7 +26,7 @@ class SessionsController < ApplicationController
     private
 
     def sessions_params
-        params.require(:guest).permit(:nickname, :password, :password_confirmation)
+        params.require(:guest).permit(:username, :password, :password_confirmation)
     end
 
 end

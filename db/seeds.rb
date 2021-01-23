@@ -110,8 +110,8 @@ comments_list = [
     ["Nothing to say",15, 7]
 ]
 
-visitor_logs.each do |entry, guest_id, room_id|
-    VisitorLog.create(entry: entry, guest_id: guest_id, room_id: room_id)
+comments_list.each do |entry, guest_id, room_id|
+    Comment.create(entry: entry, guest_id: guest_id, room_id: room_id)
 end
 
 boards_list = [
