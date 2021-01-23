@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
     end
 
     def create
-        @guest = Guest.find_by(nickname: sessions_params[:nickname])
+        @guest = Guest.find_by(username: sessions_params[:username])
         if @guest && @guest.authenticate(sessions_params[:password])
             session[:guest_id] = @guest.id
             redirect_to guest_path(@guest)
